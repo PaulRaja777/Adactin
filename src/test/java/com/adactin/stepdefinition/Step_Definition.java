@@ -16,12 +16,14 @@ public class Step_Definition extends Base_Class {
 	public static WebDriver driver = Test_Runner.driver;
 	Page_Object_Manager pom = new Page_Object_Manager(driver);
 
-	@Given("^user Launch the Application$")
-	public void user_Launch_The_Application() throws Throwable {
-		String url = FileReaderManager.getInstance().getInstanceCR().getUrl();
+
+@Given("^user Launch The Application$")
+public void user_Launch_The_Application() throws Throwable {
+	String url = FileReaderManager.getInstance().getInstanceCR().getUrl();
 	   get_ToUrl(url);
 	   thread_Sleep(3000);
-	}
+}
+	
 
 	@When("^user Enter The \"([^\"]*)\" In Username Field$")
 	public void user_Enter_The_In_Username_Field(String username) throws Throwable {
